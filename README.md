@@ -24,7 +24,7 @@ chmod -x example_usage.py
 python3 example_usage.py
 ```
 Example of graph:
-![graph](examples/graph.jpg)
+![graph](examples/graph.png)
 
 ## Citation
 tbd
