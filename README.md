@@ -2,6 +2,7 @@
 An instrument for automated graph generation from unstructured data in a controllable and predictable way. Extracts key entities and concepts from the text and generates predicates between them. Based on LLM-prompting.
 ## Getting Started
 You may find walkthrough and sample html-graph in examples folder. Sample json-output is in outputs folder.
+Demo is accessible via [link](https://huggingface.co/spaces/missvector/AGGILE).
 
 Import and sample usage of AGGILE:
 ```python
