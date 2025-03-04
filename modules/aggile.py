@@ -12,11 +12,11 @@ class Aggile:
 
         n = None
         self.subj_prompt = f"""
-        extract {n} collocations descibing key concepts, keywords, named entities from the provided source
+        extract {n} collocations describing key concepts, keywords, named entities from the provided source
         """
 
         self.obj_prompt = """
-        extract 5-10 most repesentative collocations from the provided source that are related to the provided concept
+        extract 5-10 most representative collocations from the provided source that are related to the provided concept
         """
 
         self.pred_prompt = """
@@ -126,7 +126,7 @@ class Aggile:
             - generate list of objects for each object in the dictionarytract relation for the provided concepts (subjects) based on the information from the text:
 
         :text: input text (str)
-        :concepts: the list of kewords and other key concepts extracted with aggile._get_subj (dict)
+        :concepts: the list of keywords and other key concepts extracted with aggile._get_subj (dict)
             
         :return: {related_concepts: list of related words and collocations (objects that will form triplets)} (dict)
         """
@@ -141,7 +141,7 @@ class Aggile:
         """
         Generate predicates between objects and subjects
 
-        :subj: one generated subject from core_condepts (str)
+        :subj: one generated subject from core_concepts (str)
         :obj: one generated object from relations (str) 
         :text: input text (str)
             
