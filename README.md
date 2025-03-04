@@ -24,6 +24,8 @@ source .venv/bin/activate
 chmod -x example_usage.py
 python3 example_usage.py
 ```
+**Note** that you should upload texts **500-1000 characters** long, otherwise the system prompt of generating 10 keywords will be invalid.
+
 Example of graph:
 ![graph](examples/graph.png)
 
