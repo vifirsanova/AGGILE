@@ -31,14 +31,13 @@ Example of graph:
 ## Using AGGILE for Graph-based RAG
 You can apply AGGILE for Graph-based question-answering as follows:
 ```python
-from aggile import Aggile
-
+# Initialize LLM agent
 aggile = Aggile(model='HuggingFaceH4/zephyr-7b-beta', token='YOUR TOKEN')
+# Provide your question and supporting text for building a graph
 text = '''There are several theories as to the origin of the name "pug" <...>'''
 question = 'What is the etymology of the word "Pug"?'
+# Apply `graph_rag` method to get the answer
 answer = aggile.graph_rag(text, question)
-
-print(answer)
 ```
 ## Citation
 tbd
