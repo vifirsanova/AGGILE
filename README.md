@@ -30,7 +30,7 @@ Example of graph:
 ![graph](examples/graph.png)
 ## Using AGGILE for Graph-based RAG
 You can apply AGGILE for Graph-based question-answering as follows:
-```
+```python
 from aggile import Aggile
 
 aggile = Aggile(model='HuggingFaceH4/zephyr-7b-beta', token='YOUR TOKEN')
