@@ -28,6 +28,17 @@ python3 example_usage.py
 
 Example of graph:
 ![graph](examples/graph.png)
+## Using AGGILE for Graph-based RAG
+You can apply AGGILE for Graph-based question-answering as follows:
+```
+from aggile import Aggile
 
+aggile = Aggile(model='HuggingFaceH4/zephyr-7b-beta', token='YOUR TOKEN')
+text = '''There are several theories as to the origin of the name "pug" <...>'''
+question = 'What is the etymology of the word "Pug"?'
+answer = aggile.graph_rag(text, question)
+
+print(answer)
+```
 ## Citation
 tbd
