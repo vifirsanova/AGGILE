@@ -181,9 +181,8 @@ class Aggile:
 
     def form_triples(self, text):
         """
-        :text: input text (str) if from_string=True
+        :text: input text (str)
         """
-
         # Generate objects from text
         relations = self._get_obj(text)
         # Placeholder for triplets
@@ -206,6 +205,45 @@ class Aggile:
                     triplets[subj].append(temp)
         
         return triplets
+    
+    def graph_rag(self, text, question):
+        """
+        RAG with graph for QA
+        """
+        import ast
+        triplets = self.form_triples(text)
+        graphrag_prompt = "answer the question using graph triplets and provided source"
+        answer = self.client.chat.completions.create(messages=
+                                                        [
+                                                            {
+                                                                "role": "system",
+                                                                "content": graphrag_prompt
+                                                            },
+                                                            {
+                                                                "role": "user",
+                                                                "content": f"triplets = {triplets}, source = {text}, question = {question}"
+                                                            },
+                                                        ],
+                                                        response_format=
+                                                        {
+                                                            "type": "json",
+                                                            "value":
+                                                            {
+                                                                "properties":
+                                                                {
+                                                                    "graphrag_answer":
+                                                                    {
+                                                                        "type": "string"
+                                                                    },
+                                                                }
+                                                            }
+                                                        },
+                                                        stream=False,
+                                                        max_tokens=1024,
+                                                        temperature=0.5,
+                                                        top_p=0.1
+                                                        ).choices[0].get('message')['content']
+        return ast.literal_eval(answer)
 
 class Graph:
     def __init__(self, triplets):
