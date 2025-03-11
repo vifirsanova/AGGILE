@@ -4,6 +4,9 @@ An instrument for automated graph generation from unstructured data in a control
 You may find walkthrough and sample html-graph in examples folder. Sample json-output is in outputs folder.
 Demo is accessible via [link](https://huggingface.co/spaces/missvector/AGGILE).
 
+HuggingFace demo sample output:
+![image_2025-03-04_19-47-23](https://github.com/user-attachments/assets/b7c15053-732f-4399-b528-7e671287c996)
+
 Import and sample usage of AGGILE:
 ```python
 import sys
