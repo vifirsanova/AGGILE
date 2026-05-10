@@ -43,4 +43,10 @@ question = 'What is the etymology of the word "Pug"?'
 answer = aggile.graph_rag(text, question)
 ```
 ## Citation
-tbd
+```
+@article{firsanova2025aggile,
+  title={AGGILE: Automated Graph Generation for Inference and Language Exploration},
+  author={Firsanova, Victoria and Khlusova, Yana},
+  year={2025}
+}
+```
